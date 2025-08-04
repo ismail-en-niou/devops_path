@@ -50,4 +50,5 @@ MIT License
 - URL must point to a public GitHub repository.
 - Repository must contain a README file.
 - README file must contain the project URL.
--[text](https://roadmap.sh/projects/log-archive-tool)
+
+https://roadmap.sh/projects/log-archive-tool
