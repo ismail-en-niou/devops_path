@@ -10,3 +10,6 @@
 [submodule "gh-deployment-workflow"]
 	path = gh-deployment-workflow
 	url = https://github.com/ismail-en-niou/gh-deployment-workflow.git
+[submodule "SSH-Remote-Server-Setup"]
+	path = SSH-Remote-Server-Setup
+	url = https://github.com/ismail-en-niou/SSH-Remote-Server-Setup.git
