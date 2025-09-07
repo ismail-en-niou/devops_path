@@ -1,6 +1,6 @@
 [submodule "log_archive"]
 	path = log_archive
 	url = https://github.com/ismail-en-niou/log_archive
-[submodule "server-stats"]
+[submodule "server-state"]
 	path = server-state
 	url = https://github.com/ismail-en-niou/server-stats
