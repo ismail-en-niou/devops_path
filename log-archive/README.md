@@ -1,58 +1,53 @@
-# Log Archive Tool (Bash)
+Log Archive Script
+Overview
+This script is designed to help you manage logs on a Linux server by archiving old logs, deleting them after archiving, and managing the storage of these backups. It helps keep your server clean and organized by preventing the accumulation of outdated logs and backup archives.
 
-Project Roadmap URL: [https://roadmap.sh/projects/log-archive-tool](https://roadmap.sh/projects/log-archive-tool)  
-Project GitHub URL: [https://github.com/ismail-en-niou/log-archive-tool](https://github.com/ismail-en-niou/log-archive-tool)
+Features
+Interactive CLI: Guides the user through setting up the log directory, specifying how many days of logs to keep, and how long to retain backup archives.
+Automated Archiving: Compresses logs into .tar.gz format and stores them in an archive directory.
+Automatic Cleanup: Deletes old logs after they have been archived and also deletes backup archives that are older than a specified number of days.
+Cron Integration: Option to automatically add the script to crontab for daily execution.
+Benefits
+Improves Server Performance: By regularly archiving and cleaning up old logs, you free up disk space and keep your server running efficiently.
+Easy to Use: The interactive CLI makes it simple for users of all skill levels to configure and run the script.
+Flexible Retention Policies: You can specify how long to keep logs and backup archives, allowing you to customize the script to your specific needs.
+Requirements
+Linux-based system
+Bash shell
+curl installed
+Installation
+Install curl (if not installed)
+If curl is not installed on your Linux system, you can install it using the following commands:
 
-## Description
+Debian/Ubuntu:
 
-A simple Bash CLI tool to archive logs from a specified directory by compressing them into a `.tar.gz` file and storing them in a new directory. The tool also logs the date and time of each archive operation for easy tracking.
+sudo apt update
+sudo apt install curl
+CentOS/RHEL:
 
-This helps maintain a clean system by removing old logs and storing them in a compressed format for future reference.
+sudo yum install curl
+Fedora:
 
-## Features
+sudo dnf install curl
+Run the Script Remotely
+To run the script remotely using curl, use the following command in your terminal:
 
-- Accepts the log directory as a command-line argument
-- Compresses logs into a timestamped `.tar.gz` archive
-- Stores archives in a dedicated `archived_logs` directory
-- Logs the date and time of each archive operation in `archive_log.txt`
 
-## Usage
+This command will download the script and run it directly in your shell, guiding you through the process of setting up the log archiving.
 
-```bash
+How It Works
+Specify Log Directory: The script will prompt you to enter the log directory. The default is /var/log.
+Specify Days to Keep Logs: You will be asked how many days of logs you want to keep. Logs older than this will be archived and deleted.
+Specify Days to Keep Backup Archives: You will also be asked how long to keep the backup archives. Archives older than this will be automatically deleted.
+Run Archiving: The script will compress the logs, delete the old ones, and clean up any old backup archives based on your settings.
+Optional Cron Setup: After the archiving is completed, the script will ask if you want to set up a cron job for daily execution.
+Manual Installation
+If you prefer to install the script manually, you can download it and move it to /usr/local/bin/:
+
 chmod +x log-archive.sh
-./log-archive.sh <log-directory>
-```
+sudo mv log-archive.sh /usr/local/bin/log-archive.sh
+Then, you can run the script with:
 
-For example, to archive logs from `/var/log`:
-
-```bash
-./log-archive.sh /var/log
-```
-
-- The compressed archive will be stored in the `archived_logs` directory, with a name like `logs_archive_20240816_100648.tar.gz`.
-- Each archive operation is logged in `archive_log.txt`.
-
-## Requirements
-
-- Bash shell (Linux, macOS, or WSL)
-- `tar` utility (standard on Unix systems)
-
-## Advanced Ideas
-
-Feel free to extend this tool with features such as:
-- Emailing notifications upon successful archive
-- Uploading archives to a remote server or cloud storage
-- Scheduling automated archiving (e.g., via cron jobs)
-
-## License
-
-MIT License
-
-
-### Submission Instructions
-
-- Submit the URL of your GitHub repository with the solution.
-- URL must point to a public GitHub repository.
-- Repository must contain a README file.
-- README file must contain the project URL.
--[text](https://roadmap.sh/projects/log-archive-tool)
+log-archive.sh
+License
+This project is licensed under the MIT License.
