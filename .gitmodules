@@ -4,3 +4,6 @@
 [submodule "server-state"]
 	path = server-state
 	url = https://github.com/ismail-en-niou/server-stats
+[submodule "Nginx_Log_Analyser"]
+	path = Nginx_Log_Analyser
+	url = https://github.com/ismail-en-niou/Nginx_Log_Analyser
