@@ -47,3 +47,12 @@ Feel free to extend this tool with features such as:
 ## License
 
 MIT License
+
+
+### Submission Instructions
+
+- Submit the URL of your GitHub repository with the solution.
+- URL must point to a public GitHub repository.
+- Repository must contain a README file.
+- README file must contain the project URL.
+-[text](https://roadmap.sh/projects/log-archive-tool)
